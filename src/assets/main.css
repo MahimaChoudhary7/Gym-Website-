@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;700&amp;display=swap");
+:root {
+    --clr-primary:#e0621e;
+}
+
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(#2d200e, #071a1a);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container-flex {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 60px;
+}
