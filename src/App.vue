@@ -5,6 +5,7 @@ import Footer from './components/Footer.vue';
 import Features from './components/Features.vue';
 import Explore from './components/Explore.vue';
 import Trainer from './components/Trainer.vue';
+import Testimonial from './components/Testimonial.vue';
 
 export default {
   components: {
@@ -13,6 +14,7 @@ export default {
     Features,
     Explore,
     Trainer,
+    Testimonial,
     Footer
   }
 };
@@ -26,6 +28,7 @@ export default {
     <Features/>
     <Explore/>
     <Trainer/>
+    <Testimonial/>
     <Footer/>
   </div>
 </template>
