@@ -1,29 +1,45 @@
-# my-first-project
+# Gym Landing Page 🏋️‍♂️
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern and responsive landing page for a fitness/gym website built using **Vue.js**.
 
-## Recommended IDE Setup
+## 🚀 Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Responsive design for all screen sizes 📱💻
+- Mobile-friendly navigation with Font Awesome hamburger and close icons
+- Animated buttons with hover effects
+- Multiple sections: 
+  - Hero section
+  - Features
+  - Explore
+  - Trainers
+  - Testimonials
+  - Discount offer
+- Font Awesome integration for icons
+- Clean and modular Vue components
 
-## Customize configuration
+## 🛠️ Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- [Vue.js 3](https://vuejs.org/)
+- [Font Awesome](https://fontawesome.com/)
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-## Project Setup
+## 📦 Project Setup
 
-```sh
+```bash
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Run development server
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# Build for production
 npm run build
-```
+
+## Folder Structure
+src/
+├── assets/        # Images and icons
+├── components/    # Vue components (Navbar, Hero, etc.)
+├── App.vue
+├── main.js
+
