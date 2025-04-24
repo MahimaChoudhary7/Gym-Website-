@@ -4,13 +4,13 @@
         <div class="text">
           <h1 class="mb">Complete Daily <br /><span>Workout</span> At Home</h1>
           <p class="mb">
-            Physical fitness is not only one of the most important keys to a healthy body,<br>it is the basis of dynamic and creative
+            Physical fitness is not only one of the most important keys to a healthy body,<br class="desktop-break">it is the basis of dynamic and creative
             intellectual activity.
           </p>
-          <a href="#" class="btn mt">Get Started Now</a>
+          <a href="#" class="btn mt" @click.prevent="handleClick">Get Started Now</a>
         </div>
         <div class="visual">
-          <img decoding="async" src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/banner-img.png" alt="" />
+          <img src="../assets/banner-img.png" alt="Workout banner" />
         </div>
       </div>
     </div>
@@ -18,7 +18,12 @@
 
 <script>
 export default {
-  name:'Hero'
+  name:'Hero',
+  methods: {
+    handleClick() {
+      console.log('Get Started button clicked!')
+    }
+  }
 };
 </script>
 
