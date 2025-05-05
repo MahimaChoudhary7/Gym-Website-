@@ -4,10 +4,10 @@
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Us</h1>
-            <p><i class="fa-solid fa-phone"></i>+9100000000</p>
+            <p><font-awesome-icon icon="phone" /> +911234567890</p>
             <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><font-awesome-icon :icon="['fab', 'facebook']"/></a>
+              <a href="https://www.instagram.com/resilient_fitness1/" target="_blank"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
             </div>
           </div>
               <div class="contact-right">
@@ -130,5 +130,14 @@ form .btn2:hover {
   margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .sub-title {
+    font-size: 32px;
+  }
+
+  .contact-left p {
+    font-size: 20px;
+  }
+}
 
 </style>

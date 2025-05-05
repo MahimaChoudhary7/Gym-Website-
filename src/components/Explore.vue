@@ -93,4 +93,34 @@ export default {
 .mb {
   margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px;
+  }
+  .visual img {
+    width: 300px;
+    margin-top: -30px;
+  }
+
+  .primary {
+    margin-top: 20px;
+    font-size: 28px;
+  }
+
+  .tertiary {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .benefits li {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    padding: 7px 14px;
+    font-size: 10px;
+  }
+}
 </style>

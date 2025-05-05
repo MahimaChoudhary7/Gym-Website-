@@ -84,4 +84,34 @@ p {
 .btn-2:hover {
   background-color: #d14e16;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 30px;
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  .btn-2 {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
 </style>

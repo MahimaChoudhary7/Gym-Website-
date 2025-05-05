@@ -80,4 +80,26 @@
 .btn:hover {
   background-color: #d4531b;
 }
+
+@media (max-width: 768px) {
+  #discount {
+    padding: 20px;
+  }
+  .visual {
+    max-width: 55%;
+  }
+  .primary {
+    font-size: 22px;
+  }
+
+  .tertiary {
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 7px 14px;
+  }
+}
 </style>

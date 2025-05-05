@@ -7,7 +7,7 @@
             Physical fitness is not only one of the most important keys to a healthy body,<br class="desktop-break">it is the basis of dynamic and creative
             intellectual activity.
           </p>
-          <a href="#" class="btn mt" @click.prevent="handleClick">Get Started Now</a>
+          <a href="#features" class="btn mt" @click.prevent="handleClick">Get Started Now</a>
         </div>
         <div class="visual">
           <img src="../assets/banner-img.png" alt="Workout banner" />
@@ -104,6 +104,27 @@ export default {
 .btn:hover {
   transition: 0.3s linear;
   box-shadow: var(--clr-primary) 0px 5px 15px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+      font-size: 35px;
+    }
+
+    .header p {
+      font-size: 10px;
+    }
+
+    .visual img {
+      width: 130%;
+    }
+
+    .btn {
+      margin-top: 5px;
+      width: 65%;
+      font-size: 10px;
+      padding: 5px 14px;
+    }
 }
 
 </style>

@@ -83,4 +83,34 @@ export default {
   border-radius: 50%;
   margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 40px;
+  }
+  .primary {
+    font-size: 24px;
+  }
+
+  .client img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .visual img {
+    max-width: 80%;
+    margin-left: 50px;
+  }
+
+  .secondary {
+    font-size: 14px;
+  }
+
+  .tertiary {
+    font-size: 10px;
+    text-align: justify;
+  }
+}
 </style>

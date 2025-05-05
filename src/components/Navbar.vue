@@ -3,31 +3,35 @@
         <div class="container-flex">
             <div class="logo">
                 <img src="@/assets/logo.png" alt="Logo">
+                <span class="text">RESILIENT FITNESS</span>
             </div>
             <ul :class="['nav', { active: isMobileMenuOpen }]">
                 <li class="nav-item"><a href="#home">Home</a></li>
                 <li class="nav-item"><a href="#features">Features</a></li>
                 <li class="nav-item"><a href="#explore">Explore</a></li>
-                <li class="nav-item"><a href="#register">Register</a></li>
+                <li class="nav-item"><a href="#register" @click.prevent="handleRegister">Register</a></li>
                 <a href="#" class="btn" @click.prevent="handleRegister">Register</a>
             </ul>
-            <div class="mobile-btn" @click="toggleMobileMenu"><font-awesome-icon :icon="isMobileMenuOpen ? 'Xmark' : 'bars'" /></div>
+            <div class="mobile-btn" @click="toggleMobileMenu"><font-awesome-icon :icon="isMobileMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" /></div>
         </div>
+        <RegistrationForm :is-visible="showRegistrationForm" @close="showRegistrationForm = false"/>
     </div>
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import RegistrationForm from './RegistrationForm.vue';
 export default {
-  name: 'Navbar',
-  data() {
-    return {
-        isMobileMenuOpen: false
-    };
-  },
-  methods: {
+    components: { RegistrationForm },
+    name: 'Navbar',
+    data() {
+        return {
+            isMobileMenuOpen: false,
+            showRegistrationForm: false
+        };
+     },
+     methods: {
         handleRegister() {
-            console.log("Registration Successfull!");
+            this.showRegistrationForm= true;
         },
         toggleMobileMenu() {
             this.isMobileMenuOpen= !this.isMobileMenuOpen;
@@ -48,9 +52,25 @@ export default {
     justify-content: space-between;
 }
 
-.logo img {
-    width: 50px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
     cursor: pointer;
+}
+
+.logo img {
+    display: block;
+    width: 50px;
+}
+
+.text{
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 }
 
 .nav {
@@ -94,6 +114,9 @@ export default {
 }
 
 @media (max-width: 768px) {
+    .text {
+        font-size: 16px;
+    }
     .mobile-btn {
         display: block;
     }

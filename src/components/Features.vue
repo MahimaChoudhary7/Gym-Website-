@@ -71,4 +71,24 @@ p {
   color: #666;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+
+  .features-section {
+    padding: 30px 5%;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 19px;
+    text-align: center;
+  }
+  p {
+    font-size: 13px;
+    text-align: justify;
+  }
+}
 </style>
