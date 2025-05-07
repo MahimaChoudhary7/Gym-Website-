@@ -12,8 +12,8 @@
           </div>
               <div class="contact-right">
                 <form>
-                  <input type="text" name="Name" placeholder="Your Name" required>
-                  <input type="email" name="Email" placeholder="Your Email" required>
+                  <input v-model="name" placeholder="Your Name" required>
+                  <input v-model="email" placeholder="Your Email" required>
                   <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                   <button type="submit" class="btn btn2">Submit</button>
                 </form>
@@ -60,9 +60,6 @@ export default {
 
 .contact-left p {
   margin-top: 30px;
-}
-
-.contact-left p {
   color: #e0621e;
   font-size: 24px;
 }
@@ -128,15 +125,59 @@ form .btn2:hover {
   background: #262626;
   font-weight: 300;
   margin-top: 20px;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 20px 5%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
   .sub-title {
     font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-left, .contact-right {
+    flex-basis: 100%;
+    margin-bottom: 30px;
   }
 
   .contact-left p {
-    font-size: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .social-icons {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+
+  form input, form textarea {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  form .btn2 {
+    font-size: 16px;
+    padding: 12px 36px;
+    display: block;
+    margin: 20px auto 0;
+  }
+
+  .copyright {
+    font-size: 14px;
+    padding: 20px 10px;
   }
 }
 

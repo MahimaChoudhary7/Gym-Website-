@@ -119,6 +119,12 @@ export default {
     }
     .mobile-btn {
         display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        font-size: 24px;
+        cursor: pointer;
     }
 
     .nav {
@@ -126,8 +132,10 @@ export default {
         flex-direction: column;
         width: 100%;
         background: #fff;
-        padding: 20px;
+        padding: 60px 20px 20px 20px;
         margin-top: 10px;
+        position: relative;
+        z-index: 1000;
     }
 
     .nav.active {
