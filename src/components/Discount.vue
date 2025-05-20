@@ -24,7 +24,7 @@
           <a href="#" class="btn bt" @click.prevent="showBooking = !showBooking">{{ showBooking ? 'Hide' : 'Book Now' }}</a>
           <div v-if="showBooking" class="booking-info">
             <h3>Ready to Join?</h3>
-            <p>Fill out the form on our website or call us at <strong>+91 1234567890</strong> to reserve your spot. Offer valid until <strong>June 30</strong>. You can also visit us at our nearest center for an instant registration and free demo class.</p>
+            <p>Fill out the form on our website or call us at <strong>+911234567890</strong> to reserve your spot. Offer valid until <strong>June 30</strong>. You can also visit us at our nearest center for an instant registration and free demo class.</p>
           </div>
         </div>
       </div>
@@ -44,18 +44,14 @@
 
 <style scoped>
   #discount {
-    padding: 40px 0;
+    padding: 30px 0;
   }
-
-  .section {
-  padding: 80px 10%;
-  background-color: #f9f9f9;
-}
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: -40px;
 }
 
   .visual img {
@@ -117,18 +113,23 @@
 }
 
 @media (max-width: 768px) {
-  #discount {
-    padding: 20px;
+  .container {
+    flex-direction: column;
+    text-align: start;
   }
+
   .visual {
-    max-width: 55%;
+    width: 100%;
+    margin-bottom: 30px;
   }
+
   .primary {
-    font-size: 22px;
+    font-size: 27px;
+    margin-bottom: 20px;
   }
 
   .tertiary {
-    font-size: 12px;
+    font-size: 14px;
     text-align: justify;
   }
 

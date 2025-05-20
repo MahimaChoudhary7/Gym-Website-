@@ -95,26 +95,23 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .section {
-    padding: 50px;
-  }
   .visual img {
     width: 300px;
-    margin-top: -30px;
+    margin-top: -40px;
   }
 
   .primary {
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 27px;
   }
 
   .tertiary {
-    font-size: 14px;
+    font-size: 13px;
     text-align: justify;
   }
 
   .benefits li {
-    font-size: 10px;
+    font-size: 11px;
     margin-bottom: 10px;
   }
 

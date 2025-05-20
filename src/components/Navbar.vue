@@ -5,13 +5,18 @@
                 <img src="@/assets/logo.png" alt="Logo">
                 <span class="text">RESILIENT FITNESS</span>
             </div>
-            <ul :class="['nav', { active: isMobileMenuOpen }]">
-                <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#features">Features</a></li>
-                <li class="nav-item"><a href="#explore">Explore</a></li>
+            <div class="nav-container" :class="{ active: isMobileMenuOpen }">
+                <div class="logo-container">
+                    <img src="@/assets/logo.png" alt="Logo">
+                </div>
+             <ul class="nav">
+                <li class="nav-item"><a href="#home" @click="handleNavClick">Home</a></li>
+                <li class="nav-item"><a href="#features" @click="handleNavClick">Features</a></li>
+                <li class="nav-item"><a href="#explore" @click="handleNavClick">Explore</a></li>
                 <li class="nav-item"><a href="#register" @click.prevent="handleRegister">Register</a></li>
                 <a href="#" class="btn" @click.prevent="handleRegister">Register</a>
-            </ul>
+             </ul>
+            </div>
             <div class="mobile-btn" @click="toggleMobileMenu"><font-awesome-icon :icon="isMobileMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" /></div>
         </div>
         <RegistrationForm :is-visible="showRegistrationForm" @close="showRegistrationForm = false"/>
@@ -32,9 +37,13 @@ export default {
      methods: {
         handleRegister() {
             this.showRegistrationForm= true;
+            this.isMobileMenuOpen= false;
         },
         toggleMobileMenu() {
             this.isMobileMenuOpen= !this.isMobileMenuOpen;
+        },
+        handleNavClick() {
+            this.isMobileMenuOpen= false;
         }
     }
 };
@@ -114,9 +123,14 @@ export default {
 }
 
 @media (max-width: 768px) {
+    .container-flex {
+        margin: 5px 5px;
+    }
+
     .text {
         font-size: 16px;
     }
+
     .mobile-btn {
         display: block;
         position: absolute;
@@ -127,19 +141,36 @@ export default {
         cursor: pointer;
     }
 
-    .nav {
-        display: none;
+    .nav-container {
+        display: flex;
         flex-direction: column;
-        width: 100%;
-        background: #fff;
-        padding: 60px 20px 20px 20px;
-        margin-top: 10px;
-        position: relative;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
         z-index: 1000;
+        padding-top: 60px;
     }
 
-    .nav.active {
-        display: flex;
+    .nav-container.active {
+        right: 0;
+    }
+
+    .nav-container.logo-container img{
+        max-width: 100%;
+        cursor: pointer;
+    }
+
+    .nav {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
     }
 
     .btn {

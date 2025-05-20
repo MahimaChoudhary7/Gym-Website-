@@ -232,23 +232,36 @@ export default {
 }
 
 @media (max-width: 768px) {
+
+    .header .container-flex {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .text, .visual {
+      width: 100%;
+    }
+
     .header h1 {
-      font-size: 35px;
+      font-size: 33px;
+      margin-top: 20px;
     }
 
     .header p {
-      font-size: 10px;
+      font-size: 13px;
+      line-height: 1.4;
     }
 
     .visual img {
-      width: 130%;
+      width: 100%;
+      margin-top: 20px;
     }
 
     .btn {
-      margin-top: 5px;
-      width: 65%;
-      font-size: 10px;
-      padding: 5px 14px;
+      margin-top: 10px;
+      width: 70%;
+      font-size: 14px;
+      padding: 8px 16px;
     }
 }
 
