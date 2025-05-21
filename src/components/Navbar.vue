@@ -82,6 +82,10 @@ export default {
     line-height: 1;
 }
 
+.logo-container img{
+    display: none;
+}
+
 .nav {
     list-style: none;
     display: flex;
@@ -128,7 +132,7 @@ export default {
     }
 
     .text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .mobile-btn {
@@ -161,9 +165,11 @@ export default {
         right: 0;
     }
 
-    .nav-container.logo-container img{
+    .nav-container,.logo-container img{
         max-width: 100%;
         cursor: pointer;
+        display: block;
+        margin-left: 40px;
     }
 
     .nav {

@@ -263,6 +263,26 @@ export default {
       font-size: 14px;
       padding: 8px 16px;
     }
+
+    .get-started-section h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .get-started-section p {
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .features-list li {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .get-started-section .btn {
+      padding: 9px 20px;
+      font-size: 14px;
+    }
 }
 
 </style>
